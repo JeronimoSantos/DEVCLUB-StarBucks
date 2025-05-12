@@ -1,0 +1,194 @@
+/* FONTE PRINCIPAL */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+}
+
+/* VARIÁVEIS CSS */
+:root {
+    --color-primaria: #1adf5d;
+    --color-segundaria: #d4e4ff;
+    --color-terciaria: #ff806f;
+    --color-quarternaria: #017143;
+    --color-quinternaria: #eb7495;
+    --color-sexternaria: #d752b1;
+    --color-senternaria: #8cfd8d;
+}
+
+.dark-mode:root {
+    --color-primaria: #2746F5;
+    --color-segundaria: #00193d;
+    --color-terciaria: #000000;
+    --color-quarternaria: #d2ff1f;
+    --color-senternaria: #0b284e;
+
+}
+
+/* CORPO */
+body {
+    background-color: var(--color-segundaria);
+    background: linear-gradient(to bottom, var(--color-segundaria), var(--color-senternaria));
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* LOGO PRINCIPAL */
+.logo-principal {
+    margin-left: 2rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+/* BUTÃO DARK MODE E WHITE MODE */
+#button-dark-white {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--color-primaria);
+    background-color: var(--color-quarternaria);
+    border: none;
+    transition: 0.6s ease-in-out;
+    box-shadow: 2px 2px 5px #000;
+}
+
+#button-dark-white:hover {
+    background-color: var(--color-primaria);
+    border-radius: 2rem;
+    color: var(--color-senternaria);
+}
+
+/* PARTE PRINCIPAL */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    align-items: center;
+    padding: 1rem;
+}
+
+.textos-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+    width: 38rem;
+    text-align: center;
+}
+
+/* TITULO */
+.titulo-starbuck {
+    color: var(--color-primaria);
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px var(--color-quarternaria);
+}
+
+/* TEXTO EM DISTAQUE */
+span {
+    text-shadow: 1px 1px 1px var(--color-primaria);
+    color: var(--color-quarternaria);
+}
+
+/* PARAGRAFO */
+.texto-lorem {
+    color: var(--color-primaria);
+    font-size: 1rem;
+}
+
+/* BOTÃO PRINCIPAL */
+.button-starbuck {
+    padding: 1rem;
+    background-color: var(--color-quarternaria);
+    color: var(--color-primaria);
+    border-radius: 4rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px #000;
+    transition: 0.6s ease-in-out;
+}
+
+.button-starbuck:hover {
+    border-radius: 2rem 0 2rem 0;
+    color: var(--color-senternaria);
+    background-color: var(--color-primaria);
+}
+
+.drink-destaque-container {
+    background-color: var(--color-quarternaria);
+    padding: 5rem 7rem;
+    border-radius: 50% 0 0;
+    box-shadow: 2px 4px 5px #000;
+}
+
+/* BEBIDA MAIOR */
+.drink-destaque {
+    width: 16rem;
+}
+
+.drinks-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* MENU DE BEBIDAS */
+.drinks {
+    width: 3.25rem;
+    transition: 0.5s ease-in-out;
+}
+
+.drinks:hover {
+    transform: translateY(-25px);
+}
+
+/* RODAPÉ DO SITE */
+footer {
+    color: var(--color-primaria);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    header {
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+    
+    .titulo-starbuck {
+        font-size: 1.25rem;
+    }
+
+    .texto-lorem {
+        font-size: 1rem;
+        margin: 0 5.25rem;
+        text-align: center;
+    }
+
+    .drink-destaque-container {
+        border-radius: 50%;
+        padding: 3rem;
+        margin: 2rem 0;
+    }
+
+    .drink-destaque {
+        width: 12rem;
+    }
+}
