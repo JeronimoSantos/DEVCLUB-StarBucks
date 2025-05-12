@@ -1,52 +1,67 @@
-<!DOCTYPE html> <!-- Diz a versão do HTML (HTML5) -->
-<html lang="pt-br"> <!-- Tag HTML + idioma do site -->
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Padrão de caracteres do site -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <link rel="shortcut icon" href="./img/starbucks.png" type="image/x-icon"> <!-- ICONE NA ABA -->
+    <link rel="stylesheet" href="./style2.css"> <!-- CAMINHO CSS -->
     <title>DevClub - StarBucks</title>
 </head>
 
 <body>
-    <div class="circulo"></div>
+    <!-- CABEÇALHO -->
+    <header>
 
-    <img src="./img/logo.png" class="logo">
+    <!-- LOGO PRINCIPAL COM UM LINK PARA LOJA OFICIAL -->
+        <section>
+            <a href="https://www.starbucks.com.br/" target="_blank" title="Link do site oficial" alt="Link do site oficial"> 
+                <img class="logo-principal" src="./img/logo.png" alt="Logo do Site"> 
+            </a>
+        </section>
 
-    <div class="caixa-conteudo">
+    <!-- BUTÃO DARK MODE E WHITE MODE -->
+        <section>
+            <button id="button-dark-white">Dark Mode</button>
+        </section>
+    </header>
 
-        <div class="caixa-textos">
-            <h2>
-                It's not just Coffee
+    <main>
+    <!-- TÍTULO -->
+        <section class="textos-container">
+            <h2 class="titulo-starbuck">
+                It's not just Coffee<br/>
                 It's <span class="texto-starbuck">Starbucks</span>
             </h2>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odit ab voluptas veritatis quod
-                mollitia amet maxime, aspernatur enim libero saepe ad aliquam quisquam placeat ex alias, deserunt
-                tempore
-                corrupti.</p>
+    <!-- PARAGRAFO -->
+            <p class="texto-lorem">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, blanditiis nisi nesciunt 
+                perferendis et nostrum voluptatum quidem maxime odio magni dolore accusamus dolorum esse 
+                corporis aut! Facilis sapiente soluta ullam!
+            </p>
 
-            <button>Clique no Sininho</button>
-        </div>
+    <!-- BUTÃO PRICIPAL -->
+            <button class="button-starbuck">Clique no Sininho</button>
+        </section>
 
-        <div class="caixa-imagem">
-            <img src="./img/img1.png" class="copo">
-        </div>
-    </div>
+    <!-- BEBIDA EM DESTAQUE -->
+        <section class="drink-destaque-container">
+            <img class="drink-destaque" src="./img/img1.png" alt="">
+        </section>
+    </main>
 
-    <div class="caixa-menu">
-        <img src="./img/thumb1.png" class="botao-menu" onclick="trocarACor('#017143'); trocarImagem('./img/img1.png')" >
-        <img src="./img/thumb2.png" class="botao-menu" onclick="trocarACor('#eb7495'); trocarImagem('./img/img2.png')">
-        <img src="./img/thumb3.png" class="botao-menu" onclick="trocarACor('#d752b1'); trocarImagem('./img/img3.png')">
-    </div>
+    <!-- MENU DE BEBIDAS -->
+    <section class="drinks-container">
+        <img class="drinks" src="./img/thumb1.png" alt="" title="" onclick="trocarCor('#017143', '#ff806f'); trocarImg('./img/img1.png')">
+        <img class="drinks" src="./img/thumb2.png" alt="" title="" onclick="trocarCor('#eb7495', '#d752b1'); trocarImg('./img/img2.png')">
+        <img class="drinks" src="./img/thumb3.png" alt="" title="" onclick="trocarCor('#d752b1', '#293728'); trocarImg('./img/img3.png')">
+    </section>
 
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2025 Jeronimo Santos</p>
+    </footer>
+
+    <script src="./script2.js"></script> <!-- CAMINHO JAVASCRIPT -->
 </body>
-<script src="scripts.js"></script>
-
 </html>
